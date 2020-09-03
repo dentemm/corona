@@ -43,15 +43,16 @@ body {
 }
 
 .clock {
-  font-size: 4rem;
-  font-weight: 200;
+  font-size: 5rem;
+  font-weight: 400;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
 }
 
 .date-label {
-	font-size: 2rem;
+  font-size: 1.9rem;
+  font-weight: 100;
 }
 
 .form-control {
@@ -68,14 +69,20 @@ body {
 
 h1 {
   font-weight: 700;
-	font-size: 4rem;
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 100;
+	font-size: 1.9rem;
 	text-transform: uppercase;
 	padding-bottom: 2rem;
 }
 
-h3 {
-	font-size: 1.5rem;
-	text-transform: uppercase;
+h5 {
+  font-weight: 100;
+	font-size: 1.1rem;
 	padding-bottom: 1rem;
 }
 
