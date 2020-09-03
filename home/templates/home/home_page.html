@@ -9,7 +9,7 @@
 {% block content %}
   <div class="content">
     <div class="container">
-      <div class="col-lg-8">
+      <div class="col-xl-7 col-lg-8 col-md-10">
         <div class="row">
           <div class="offset-lg-2 col-lg-8 col-xs-11 text-center pt-3">
             <h5>{{ page.info }}</h5>
@@ -47,41 +47,42 @@
       
       <!-- mailchimp news letter  -->
       <div class="row">
-      <div class="col-lg-8">
-        <p class="pt-3 ml-3">{{ page.discover }}:<p>
-        <form action="https://health-house.us13.list-manage.com/subscribe/post" method="POST">
-          <input type="hidden" name="u" value="d5419bf6a7b18de40b57ab673">
-          <input type="hidden" name="id" value="9bb5a9f1da">
-          <div class="input-group mb-3 align-self-center col-9">
-            <input 
-              type="email"
-              autocapitalize="off"
-              autocorrect="off"
-              name="MERGE0"
-              id="MERGE0"
-              id="email"
-              value=""
-              placeholder="Email"
-              aria-describedby="basic-addon2"
-              class="form-control text-secondary"
-            >
-            <div class="col-sm-6 mb-5">
-              <button type="submit" class="btn btn-white text-black bg-white">Notify me</button>
+        <div class="col-lg-8 col-sm-12">
+          <p class="pt-3 ml-3">{{ page.discover }}:<p>
+          <form action="https://health-house.us13.list-manage.com/subscribe/post" method="POST">
+            <input type="hidden" name="u" value="d5419bf6a7b18de40b57ab673">
+            <input type="hidden" name="id" value="9bb5a9f1da">
+            <div class="input-group mb-3 align-self-center col-9">
+              <input 
+                type="email"
+                autocapitalize="off"
+                autocorrect="off"
+                name="MERGE0"
+                id="MERGE0"
+                id="email"
+                value=""
+                placeholder="Email"
+                aria-describedby="basic-addon2"
+                class="form-control text-secondary"
+              >
+              <div class="col-sm-6 mb-5">
+                <button type="submit" class="btn btn-white text-black bg-white">Notify me</button>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-lg-4 pt-3">
-        <div class="row">
-          <div class="col-lg-4">
-            <a href="https://www.health-house.be" target="_blank">
-              <img class="img-fluid" src="{% static 'assets/hh_logo_white.png' %}">
-            </a>
-          </div>
-          <div class="col-lg-8">
-            <a href="https://www.norvelljefferson.com" target="_blank">
-              <img class="img-fluid" src="{% static 'assets/nj_logo_white.png' %}">
-            </a>
+          </form>
+        </div>
+        <div class="col-lg-4 col-sm-12 pt-3">
+          <div class="row">
+            <div class="col-lg-4 col-sm-4">
+              <a href="https://www.health-house.be" target="_blank">
+                <img class="img-fluid" src="{% static 'assets/hh_logo_white.png' %}">
+              </a>
+            </div>
+            <div class="offset-lg-0 col-lg-8 offset-sm-1 col-sm-7">
+              <a href="https://www.norvelljefferson.com" target="_blank">
+                <img class="img-fluid" src="{% static 'assets/nj_logo_white.png' %}">
+              </a>
+            </div>
           </div>
         </div>
       </div>
