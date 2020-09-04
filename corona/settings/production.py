@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = True
+DEBUG = False
 
 try:
     from .local import *
@@ -14,4 +14,4 @@ DATABASES['default'] =  dj_database_url.config()
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.aws.amazon.com', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.aws.amazon.com', '.herokuapp.com', 'planetvirus.org', 'planetvirus.net', 'planetvirus.info']
