@@ -12,7 +12,7 @@ WSGI_APPLICATION = 'uniekgroen.wsgi.application'
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
