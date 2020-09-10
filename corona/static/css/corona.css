@@ -91,3 +91,21 @@ h5 {
     max-width: 1195px;
   }
 }
+
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .clock {
+    font-size: 3.3rem;
+
+  }
+
+  .date-label {
+    font-size: 1.6rem;
+  }
+}
