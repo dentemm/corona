@@ -107,7 +107,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
   margin: auto;
   background-color: black;
 }
@@ -137,11 +137,11 @@ button.close {
   height: 100%;
   border: 0;
   border-radius: 0;
-  background-color: transparent;
+  background-color: black;
 }
 .modal .modal-body {
   overflow-y: auto;
-  background-color: transparent;
+  background-color: black;
 }
 
 .modal .modal-header {
