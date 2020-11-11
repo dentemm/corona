@@ -9,7 +9,9 @@
 {% block content %}
   <div class="background">
     <video loop muted autoplay>
-      <source src="{% static 'assets/bg_movie.mp4' %}" type="video/mp4" class="bg-movie">
+      {% comment %} <source src="{% static 'assets/bg_movie.mp4' %}" type="video/mp4" class="bg-movie"> {% endcomment %}
+      <source src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/bg_movie.mp4" type="video/mp4" class="bg-movie">
+
     </video>
   </div>
   <div class="content">
@@ -65,7 +67,8 @@
           <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
         </div>
         <div class="col-6 col-md-4">
-          <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid">
+          {% comment %} <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid"> {% endcomment %}
+           <img src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/teaser.mp4" class="img img-fluid">
         </div>
       </div>
     </div>
