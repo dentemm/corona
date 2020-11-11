@@ -1,56 +1,57 @@
-@font-face {
-  font-family: 'Gotham';
-  font-weight: 500;
-  src: local('temm'),
-       url('gothic.ttf');
-}
 
-@font-face {
-  font-family: 'Gotham';
-  font-weight: 300;
-  src: local('temmlight'),
-       url('gothiclight.ttf');
-}
-
-@font-face {
-  font-family: 'Gotham';
-  font-weight: 700;
-  src: local('temmbold'),
-       url('gothicbold.ttf');
-}
 
 * {
-  font-family: Gotham !important;
+  font-family: frank-new, sans-serif !important;
+  font-style: normal;
 }
 
 body {
-  background-color: rgb(15, 16, 11);
+  background-color: rgb(236, 236, 236);
+}
+
+.background {
+  background-color: rgb(236, 236, 236);
+  width: 100vw;
+}
+
+video {
+  background-color: rgb(236, 236, 236);
+  width: 100vw;
+}
+
+.bg-movie {
+  background-color: rgb(236, 236, 236);
+  object-fit: fill;
 }
 
 .content {
-	width: 100vw;
-	min-height: 100vh;
-	background-color: rgb(15, 16, 11);
-	background-image: url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  color: white;
-  padding-top: 7rem;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.container {
-  padding-bottom: 2rem;
+.title-container {
+  margin-top: 31vw;
 }
 
 .clock {
-  font-size: 5rem;
-  font-weight: 400;
+  color: rgb(128, 131, 134);
+  margin-top: 72vw;
+  font-size: 7rem;
+  font-weight: 500 !important;
+  padding: 2rem;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
 }
 
 .date-label {
+  margin-top: -1rem;
   font-size: 1.9rem;
   font-weight: 100;
 }
@@ -68,9 +69,10 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 90;
 	font-size: 5.2rem;
-	text-transform: uppercase;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
 h3 {
@@ -86,26 +88,213 @@ h5 {
 	padding-bottom: 1rem;
 }
 
-@media (min-width: 1200px) {
+.btn.btn-primary {
+  width: 40vw;
+  padding: 1rem;
+  background-color: rgb(125, 160, 186) !important;
+  border: none;
+}
+
+.btn.btn-white {
+  width: 40vw;
+  padding: 1rem;
+  background-color: white !important;
+  color: rgb(125, 160, 186) !important;
+  border: none;
+}
+
+.video-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  background-color: black;
+}
+
+.video-player .bg-movie {
+  margin: auto;
+}
+
+.modal {
+  padding: 0 !important; 
+}
+
+.modal .modal-dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+}
+
+button.close {
+  color: lightgray;
+  font-weight: 200 !important;
+
+}
+
+.modal .modal-content {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.modal .modal-body {
+  overflow-y: auto;
+  background-color: transparent;
+}
+
+.modal .modal-header {
+  border: none;
+}
+
+.adjust-vw {
+  width: 50vw;
+}
+
+.top-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(125, 160, 186)
+}
+
+.bottom-text {
+  color: rgb(128, 131, 134);
+  font-size: 1.1rem;
+}
+
+@media (min-width: 190px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1195px;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1200PX) {
+ 
+  .btn.btn-primary {
+    width: 55vw;
+    padding: 1rem;
+    background-color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .btn.btn-white {
+    width: 55vw;
+    padding: 1rem;
+    background-color: white !important;
+    color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .adjust-vw {
+    width: 56vw;
+  }
+  
+  .top-text {
+    margin-bottom: 0px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(125, 160, 186)
+  }
+  
+  .bottom-text {
+    color: rgb(128, 131, 134);
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
   h1 {
-    font-size: 4rem;
+    font-size: 6rem !important;
   }
   h3 {
     font-size: 1.4rem;
   }
 
   .clock {
-    font-size: 3.3rem;
-
+    font-size: 4rem;
   }
 
   .date-label {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .btn.btn-primary {
+    width: 62vw;
+    padding: 1rem;
+    background-color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .btn.btn-white {
+    width: 62vw;
+    padding: 1rem;
+    background-color: white !important;
+    color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .adjust-vw {
+    width: 65vw;
+  }
+  
+  .top-text {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(125, 160, 186)
+  }
+  
+  .bottom-text {
+    color: rgb(128, 131, 134);
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 5rem !important;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .clock {
+    font-size: 2.7rem;
+  }
+
+  .date-label {
+    font-size: 1.2rem;
+  }
+
+  .btn.btn-primary {
+    width: 72vw;
+    padding: 1rem;
+    background-color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .btn.btn-white {
+    width: 72vw;
+    padding: 1rem;
+    background-color: white !important;
+    color: rgb(125, 160, 186) !important;
+    border: none;
+  }
+
+  .adjust-vw {
+    width: 80vw;
+  }
+  
+  .top-text {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(125, 160, 186)
+  }
+  
+  .bottom-text {
+    color: rgb(128, 131, 134);
+    font-size: 1.0rem;
   }
 }

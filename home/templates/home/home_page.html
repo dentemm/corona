@@ -7,92 +7,95 @@
 {% endblock extra_css %}
 
 {% block content %}
+  <div class="background">
+    <video loop muted autoplay>
+      <source src="{% static 'assets/bg_movie.mp4' %}" type="video/mp4" class="bg-movie">
+    </video>
+  </div>
+  <div class="content">
+    <div class="title-container">
+      <img src="{% static 'assets/title_image.png' %}" style="width: 36vw"/>
+    </div>
+  </div>
   <div class="content">
     <div class="container">
-      <div class="col-xl-7 col-lg-8 col-md-10">
-        <div class="row">
-          <div class="offset-lg-2 col-lg-8 col-xs-11 text-center pt-3">
-            <h5 class="pl-2 pr-2">{{ page.info }}</h5>
-          </div>
-          <div class="col-lg-12 col-xs-10 mb-1 text-center  pl-0 pr-0">
-            <h1>
-              {{ page.title }}
-            </h1>
-          </div>
-          <div class="col-lg-12 col-xs-12 text-center pl-0 pr-0">
-            {% comment %} <h3 style="letter-spacing: 2px"> {% endcomment %}
-            <h3>
-              [ {{ page.subtitle }} ]
-            </h3>
-          </div>
-          <div class="clock offset-lg-1 col-lg-10 mb-5 pl-0 pr-0">
-            <div class="dayscontainer">
-              <div class="days"></div>
-              <div class="date-label">DAYS</div>
-            </div>
-            <div class="hourscontainer">
-              <div class="hours"></div>
-              <div class="date-label">HOURS</div>
-            </div>
-            <div class="minutescontainer">
-              <div class="minutes"></div>
-              <div class="date-label">MIN</div>
-            </div>
-            <div class="secondscontainer">
-              <div class="seconds"></div>
-              <div class="date-label">SEC</div>
-            </div>
-          </div>
+      <div class="clock">
+        <div class="dayscontainer">
+          <div class="days"></div>
+          <div class="date-label">DAYS</div>
+        </div>
+        <div class="hourscontainer">
+          <div class="hours"></div>
+          <div class="date-label">HOURS</div>
+        </div>
+        <div class="minutescontainer">
+          <div class="minutes"></div>
+          <div class="date-label">MIN</div>
+        </div>
+        <div class="secondscontainer">
+          <div class="seconds"></div>
+          <div class="date-label">SEC</div>
         </div>
       </div>
-      
-      <!-- mailchimp news letter  -->
+    </div>
+    <div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-lg btn-primary data-label" data-toggle="modal" data-target="#videoModal">
+        WATCH TEASER
+      </button>
+      <div class="mt-4"></div>
+
+      <button type="button" class="btn btn-lg btn-white data-label" data-toggle="modal" data-target="#videoModal">
+        REGISTER FOR LIVESTREAM
+      </button>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center align-items-center" style="flex-direction: column">
+          <p class="text-center adjust-vw top-text">
+            REGISTER FOR A UNIQUE ONLINE PANEL DISCUSSION (DUTCH SPOKEN)
+          </p>
+          <p class="text-center adjust-vw bottom-text">
+            BETWEEN BELGIAN AND DUTCH EXPERTS, PATIENTS AND DOCTORS ON THE COVID-19 PANDEMIC
+          </p>
+      </div>
+    </div>
+    <div class="container mt-5">
       <div class="row">
-        <div class="col-lg-8 col-12">
-          <p class="pt-3 ml-3">{{ page.discover }}:<p>
-          <form action="https://health-house.us13.list-manage.com/subscribe/post" method="POST">
-            <input type="hidden" name="u" value="d5419bf6a7b18de40b57ab673">
-            <input type="hidden" name="id" value="9bb5a9f1da">
-            <div class="input-group mb-3 align-self-center col-lg-9 col-12">
-              <input 
-                type="email"
-                autocapitalize="off"
-                autocorrect="off"
-                name="MERGE0"
-                id="MERGE0"
-                id="email"
-                value=""
-                placeholder="Email"
-                aria-describedby="basic-addon2"
-                class="form-control text-secondary"
-              >
-              <div class="col-lg-6 col-5 mb-5">
-                <button type="submit" class="btn btn-white text-black bg-white">Notify me</button>
-              </div>
-            </div>
-          </form>
+        <div class="col-4 offset-1 col-md-3 offset-md-2">
+          <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
         </div>
-        <div class="col-lg-4 col-12 pt-3">
-          <div class="row">
-            <div class="col-lg-4 col-4">
-              <a href="https://www.health-house.be" target="_blank">
-                <img class="img-fluid" src="{% static 'assets/hh_logo_white.png' %}">
-              </a>
-            </div>
-            <div class="offset-lg-0 col-lg-8 offset-xs-1 col-7">
-              <a href="https://www.norvelljefferson.com" target="_blank">
-                <img class="img-fluid" src="{% static 'assets/nj_logo_white.png' %}">
-              </a>
-            </div>
-          </div>
+        <div class="col-6 col-md-4">
+          <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid">
         </div>
       </div>
     </div>
   </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="video-player">
+        <video loop muted autoplay>
+          <source src="{% static 'assets/teaser.mp4' %}" type="video/mp4" class="bg-movie">
+        </video>
+      </div>
+      <div class="modal-content" style="position: absolute; top: 0px; left: 0px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 {% endblock content %}
 
 {% block extra_js %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
