@@ -87,7 +87,7 @@
         </div>
         <div class="modal-body">
           <div class="video-player">
-            <video controls id="teaserVideo">
+            <video controls autoplay id="teaserVideo">
               <source src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/teaser.mp4" type="video/mp4" class="bg-movie">
             </video>
           </div>
@@ -142,15 +142,21 @@
       $("div.clock .seconds").html(result[3])
     }
 
-  /*  let vid = $('#teaserVideo');
+    let vid = document.getElementById('teaserVideo')
 
     let pauseVid = () => { 
       vid.pause(); 
     }
 
     $('#videoModal').on('hide.bs.modal', function () {
-      pauseVid();
-    }) */
+
+      console.log('hierzo');
+      vid.pause();
+    })
+
+    $('#videoModal').on('show.bs.modal', function () {
+      vid.play();
+    })
 
     $(() => {
       updateClock()
