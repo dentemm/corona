@@ -84,7 +84,7 @@
         </div>
         <div class="modal-body">
           <div class="video-player">
-            <video controls>
+            <video controls id="teaserVideo">
               <source src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/teaser.mp4" type="video/mp4" class="bg-movie">
             </video>
           </div>
@@ -138,6 +138,16 @@
       $("div.clock .minutes").html(result[2])
       $("div.clock .seconds").html(result[3])
     }
+
+    let vid = $('#teaserVideo');
+
+    let pauseVid = () => { 
+      vid.pause(); 
+    }
+
+    $('#videoModal').on('hide.bs.modal', function () {
+      pauseVid();
+    })
 
     $(() => {
       updateClock()
