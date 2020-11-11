@@ -67,8 +67,7 @@
           <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
         </div>
         <div class="col-6 col-md-4">
-          {% comment %} <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid"> {% endcomment %}
-           <img src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/teaser.mp4" class="img img-fluid">
+          <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid">
         </div>
       </div>
     </div>
@@ -79,8 +78,8 @@
   <div class="modal fade" id="videoModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="video-player">
-        <video loop muted autoplay>
-          <source src="{% static 'assets/teaser.mp4' %}" type="video/mp4" class="bg-movie">
+        <video loop autoplay>
+          <source src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/teaser.mp4" type="video/mp4" class="bg-movie">
         </video>
       </div>
       <div class="modal-content" style="position: absolute; top: 0px; left: 0px;">
