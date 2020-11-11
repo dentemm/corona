@@ -56,17 +56,21 @@
             REGISTER FOR A UNIQUE ONLINE PANEL DISCUSSION (DUTCH SPOKEN)
           </p>
           <p class="text-center adjust-vw bottom-text">
-            BETWEEN BELGIAN AND DUTCH EXPERTS, PATIENTS AND DOCTORS ON THE COVID-19 PANDEMIC
+            BETWEEN BELGIAN AND DUTCH EXPERTS, PATIENTS AND PHYSICIANS ON THE COVID-19 PANDEMIC
           </p>
       </div>
     </div>
     <div class="container mt-5">
       <div class="row">
         <div class="col-4 offset-1 col-md-3 offset-md-2">
-          <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
+          <a href="https://www.health-house.be" target="_blank">
+            <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
+          </a>
         </div>
         <div class="col-6 col-md-4">
-          <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid">
+          <a href="https://www.norvelljefferson.com" target="_blank">
+            <img src="{% static 'assets/logo_nj.png' %}" class="img img-fluid">
+          </a>
         </div>
       </div>
     </div>
@@ -139,7 +143,7 @@
       $("div.clock .seconds").html(result[3])
     }
 
-    let vid = $('#teaserVideo');
+  /*  let vid = $('#teaserVideo');
 
     let pauseVid = () => { 
       vid.pause(); 
@@ -147,7 +151,7 @@
 
     $('#videoModal').on('hide.bs.modal', function () {
       pauseVid();
-    })
+    }) */
 
     $(() => {
       updateClock()
