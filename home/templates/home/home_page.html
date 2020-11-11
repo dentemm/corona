@@ -8,15 +8,14 @@
 
 {% block content %}
   <div class="background">
-    <video loop muted autoplay>
+    <video loop muted autoplay playsinline>
       {% comment %} <source src="{% static 'assets/bg_movie.mp4' %}" type="video/mp4" class="bg-movie"> {% endcomment %}
       <source src="https://thinkmobile-public.s3.eu-central-1.amazonaws.com/bg_movie.mp4" type="video/mp4" class="bg-movie">
-
     </video>
   </div>
   <div class="content">
     <div class="title-container">
-      <img src="{% static 'assets/title_image.png' %}" style="width: 36vw"/>
+      <img src="{% static 'assets/title_image.png' %}" class="img img-fluid"/>
     </div>
   </div>
   <div class="content">
@@ -62,7 +61,7 @@
     </div>
     <div class="container mt-5">
       <div class="row">
-        <div class="col-4 offset-1 col-md-3 offset-md-2">
+        <div class="col-4 offset-1 col-md-3 offset-md-2 text-center">
           <a href="https://www.health-house.be" target="_blank">
             <img src="{% static 'assets/logo_hh.png' %}" class="img img-fluid">
           </a>

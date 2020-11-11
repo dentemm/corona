@@ -36,12 +36,13 @@ video {
 }
 
 .title-container {
-  margin-top: 31vw;
+  width: 36vw;
+  margin-top: 28vw;
 }
 
 .clock {
   color: rgb(128, 131, 134);
-  margin-top: 72vw;
+  margin-top: 70vw;
   font-size: 7rem;
   font-weight: 500 !important;
   padding: 2rem;
@@ -169,7 +170,27 @@ button.close {
   }
 }
 
-@media (max-width: 1200PX) {
+@media (min-width: 1200px) {
+  video {
+    display: flex;
+    justify-content: center;
+    width: 1200px !important;
+    margin: auto;
+  }
+  
+  .title-container {
+    display: flex;
+    margin-top: 336px !important;
+    width: 432px !important;
+    justify-content: center;
+  }
+
+  .clock {
+    margin-top: 840px !important;
+  }
+}
+
+@media (max-width: 1200px) {
  
   .btn.btn-primary {
     width: 55vw;
